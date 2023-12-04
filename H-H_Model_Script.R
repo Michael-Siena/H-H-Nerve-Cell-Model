@@ -1,4 +1,5 @@
 # Hodgkin-Huxley Nerve Cell Model 
+# See https://en.wikipedia.org/wiki/Hodgkin%E2%80%93Huxley_model
 #################################
 # Clear environment
 cat("\f") # clears console
