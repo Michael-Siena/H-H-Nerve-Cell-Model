@@ -36,14 +36,13 @@ while ( V < 0 )
   I[2001:length(t)] <- currentLevels
   
   # Constant parameters
-  # refer to table 3 (Hodkin & Huxley, 1952)
   Gbar_Na <- 120; Gbar_K <- 36; Gbar_l <- 0.3
   C_M <- 1; V_Na <- 115; V_K <- -12; V_l <- 10.6
   
   ls_HH <- rep(list(list(list())), 4) 
   names(ls_HH) <- c("V", "Coefficients", "Currents", "Derivates")
   
-  # Initial states (at t = 1)
+  # Initial states
   ls_HH$V <- rep(0, 10001)
   ls_HH$V[1] <- 0 # voltage at baseline
   
