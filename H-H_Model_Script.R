@@ -19,7 +19,7 @@ for (pkgName in pkgNames)
 # Model 
 i <- 0
 V <- -70
-while ( V < 0 ) 
+while (V < 0) 
 {
   simTime <- 100 # in ms
   delta_T <- 0.01 # time interval in ms
