@@ -46,9 +46,9 @@ while ( V < 0 )
   ls_HH$V <- rep(0, 10001)
   ls_HH$V[1] <- 0 # voltage at baseline
   
-  ls_HH[[2]]$alpha_n <- rep(0, 10001); ls_HH[[2]]$alpha_n[1] <- .01 * ( (10-ls_HH$V[1]) / (exp((10-ls_HH$V[1])/10)-1) )
+  ls_HH[[2]]$alpha_n <- rep(0, 10001); ls_HH[[2]]$alpha_n[1] <- .01 * ((10-ls_HH$V[1]) / (exp((10-ls_HH$V[1])/10)-1))
   ls_HH[[2]]$beta_n <- rep(0, 10001); ls_HH[[2]]$beta_n[1] <- .125*exp(-ls_HH$V[1]/80)
-  ls_HH[[2]]$alpha_m <- rep(0, 10001); ls_HH[[2]]$alpha_m[1] <- .1*( (25-ls_HH$V[1]) / (exp((25-ls_HH$V[1])/10)-1) ) 
+  ls_HH[[2]]$alpha_m <- rep(0, 10001); ls_HH[[2]]$alpha_m[1] <- .1*((25-ls_HH$V[1]) / (exp((25-ls_HH$V[1])/10)-1)) 
   ls_HH[[2]]$beta_m <- rep(0, 10001); ls_HH[[2]]$beta_m[1] <- 4*exp(-ls_HH$V[1]/18)
   ls_HH[[2]]$alpha_h <- rep(0, 10001); ls_HH[[2]]$alpha_h[1] <- .07*exp(-ls_HH$V[1]/20)
   ls_HH[[2]]$beta_h <- rep(0, 10001); ls_HH[[2]]$beta_h[1] <- 1/(exp((30-ls_HH$V[1])/10)+1) 
