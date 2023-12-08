@@ -13,7 +13,6 @@ for (pkgName in pkgNames)
   {
     install.packages(pkgName)
   }
-  try(library(pkgName, character.only = TRUE))
 }
 
 # Model 
