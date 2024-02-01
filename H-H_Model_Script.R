@@ -142,18 +142,5 @@ while (V < 0)
   i <- i + 0.1
   print(paste0("Current level: ", currentLevels, "; Max Voltage: ", V))
 }
-# Find local maxima
-localMaxima <- function(x)
-{
-  y <- diff(c(-.Machine$integer.max, x)) > 0L
-  rle(y)$lengths
-  y <- cumsum(rle(y)$lengths)
-  y <- y[seq.int(1L, length(y), 2L)]
-  if ( x[[1]] == x[[2]]) 
-  {
-    y <- y[-1]
-  }
-  y
-}
 
 V_Smooth <- smooth(ls_HH$V) # smooth voltage
